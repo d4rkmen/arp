@@ -1,0 +1,27 @@
+author: d4rkmen <darkmen@i.ua>
+description: ARP library
+type: lib
+version: 1.0
+
+tags:
+  - c
+
+sources:
+  - src
+
+includes:
+  - include
+
+config_schema:
+  - ["arp", "o", {title: "ARP settings"}]
+  - ["arp.rpc_enable", "b", true, {title: "Enable ARP rpc handler"}]
+
+cdefs:
+  ARP_TABLE_SIZE: 30
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/lwip
+  - origin: https://github.com/mongoose-os-libs/rpc-common
+
+# Used by the mos tool to catch mos binaries incompatible with this file format
+manifest_version: 2020-08-02
